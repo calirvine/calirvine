@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog & Porfolio`,
-    author: `Ali Salah`,
+    title: `Cal Irvine`,
+    author: `Cal Irvine`,
     description: `A starter blog & portfolio for gatsby.`,
-    siteUrl: `https://gatsby-starter-blog-and-portfolio-demo.netlify.com/`,
+    siteUrl: `https://calirvine.com`,
     social: {
-      twitter: `alisalahio`,
+      twitter: `cal_irvine`,
+      instagram: `cal_irvine`,
+      github: "calirvine",
+      stackoverflow: "5847354/cal-irvine",
+      linkedin: "callum-irvine-58bb094b",
     },
     projects: [
       {
@@ -68,20 +72,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        //trackingId: `UA-121126739-2`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Cal Irvine bio page`,
+        short_name: `Cal Irvine`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/male-technologist.png`,
       },
     },
     `gatsby-plugin-offline`,
