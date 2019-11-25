@@ -34,10 +34,7 @@ class Layout extends React.Component {
         <div style={{ float: "right" }}>
           <ul style={{ float: "left", listStyle: "none", lineHeight: "1" }}>
             <li>
-              <a href="mailto:cal@ellemayo.com">cal@ellemayo.com</a>
-            </li>
-            <li>
-              <a href="tel:4164556736">416-455-6736</a>
+              <a href="mailto:hi@calirvine.com">hi@calirvine.com</a>
             </li>
           </ul>
         </div>
