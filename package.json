@@ -37,7 +37,8 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "style-loader": "^1.0.0"
   },
   "homepage": "https://github.com/alisalahio/gatsby-starter-blog-and-portfolio#readme",
   "keywords": [

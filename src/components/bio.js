@@ -8,13 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import {
-  FaTwitterSquare as Twitter,
-  FaLinkedin as Linkedin,
-  FaStackOverflow as Stackoverflow,
-  FaGithubSquare as Github,
-  FaInstagram as Instagram,
-} from "react-icons/fa"
+import SocialLink from "./socialLink"
 
 import { rhythm } from "../utils/typography"
 
@@ -33,6 +27,10 @@ const Bio = () => {
           author
           social {
             twitter
+            instagram
+            github
+            stackoverflow
+            linkedin
           }
         }
       }
@@ -60,23 +58,17 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <div>
         <strong>{author}</strong> is a developer from Toronto, Ontario, Canada.{" "}
         <a href="mailto:cal@ellemayo.com">Send him a message</a> if you think
         you would enjoy working together!
         <br />
         <div style={{ fontSize: rhythm(1) }}>
-          <a href="">
-            <Twitter />
-          </a>
-          <a href="">
-            <Linkedin />
-          </a>
-          <Stackoverflow />
-          <Instagram />
-          <Github />
+          {Object.keys(social).map(key => {
+            return <SocialLink key={key} network={key} username={social[key]} />
+          })}
         </div>
-      </p>
+      </div>
     </div>
   )
 }

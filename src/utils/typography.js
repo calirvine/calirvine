@@ -6,6 +6,16 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    a: {
+      boxShadow: `none`,
+    },
+    "a:hover": {
+      opacity: 0.75,
+      msTransition: `all 0.2s ease-in-out`,
+      MozTransition: `all 0.2s ease-in-out`,
+      transition: `all 0.2s ease-in-out`,
+      WebkitTransition: `all 0.2s ease-in-out`,
+    },
   }
 }
 
