@@ -8,7 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 const Experiences = () => {
   const data = useStaticQuery(graphql`
     query ExperienceQuery {
-      allExperienceJson {
+      allExperienceJson(sort: { fields: startDate, order: DESC }) {
         nodes {
           company
           description
