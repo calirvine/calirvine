@@ -1,0 +1,18 @@
+{
+  "company": "The Fields Institute at The University of Toronto",
+  "jobTitle": "Web Application Developer",
+  "startDate": "2019-03-01",
+  "endDate": null,
+  "url": "https://fields.utoronto.ca",
+  "description": "In house web application developer for a mathematical institute based out of the university of Toronto. Tasks are primarily creating modern frontend UIs in React/ Redux to interface with legacy APIs.",
+  "skills": [
+    "react",
+    "redux",
+    "nodejs",
+    "postgres",
+    "sqlite",
+    "html",
+    "css",
+    "agile"
+  ]
+}

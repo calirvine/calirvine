@@ -1,0 +1,21 @@
+{
+  "company": "Freelance",
+  "jobTitle": "Freelancer",
+  "startDate": "2018-04-01",
+  "endDate": null,
+  "url": "https://calirvine.com",
+  "description": "My freelance work is mostly centered around website refreshes, primarily WordPress. I have experience regionalizing websites to support multiple languages. I have taken a few small web app development projects as well. ",
+  "skills": [
+    "react",
+    "redux",
+    "nodejs",
+    "php",
+    "postgres",
+    "redis",
+    "mariadb",
+    "mysql",
+    "agile",
+    "clientRelationships",
+    "teamLeadership"
+  ]
+}

@@ -11,24 +11,6 @@ module.exports = {
       stackoverflow: "5847354/cal-irvine",
       linkedin: "callum-irvine-58bb094b",
     },
-    projects: [
-      {
-        title: `Gatsby Starter Blog & Portfolio!`,
-        description: `Gatsby official starter with portfolio section added!`,
-        url: `https://gatsby-starter-blog-and-portfolio.netlify.com/`,
-        moreLinks: [
-          {
-            type: `Github`,
-            url: `https://github.com/alisalahio/gatsby-starter-blog-and-portfolio`,
-          },
-        ],
-      },
-      {
-        title: `React`,
-        description: `React's homepage is created with Gatsby!`,
-        url: `https://reactjs.org/`,
-      },
-    ],
   },
   plugins: [
     {
@@ -36,6 +18,14 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/experience`,
+        name: `experience`,
       },
     },
     {

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Projects from "../components/projects"
+import Experience from "../components/experience"
 import Posts from "../components/posts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,8 +16,8 @@ class Index extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="My projects & posts" />
         <Bio />
-        <Projects />
-        <Posts />
+        <Experience />
+        {/* <Posts /> */}
       </Layout>
     )
   }

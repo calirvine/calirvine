@@ -1,0 +1,9 @@
+.contact-wrapper {
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-wrapper {
+    float: left;
+  }
+}

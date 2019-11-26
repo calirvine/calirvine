@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import "./layout.css"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -31,7 +32,7 @@ class Layout extends React.Component {
             </Link>
           </h1>
         </div>
-        <div style={{ float: "right" }}>
+        <div className="contact-wrapper">
           <ul style={{ float: "left", listStyle: "none", lineHeight: "1" }}>
             <li>
               <a href="mailto:hi@calirvine.com">hi@calirvine.com</a>
@@ -57,11 +58,9 @@ class Layout extends React.Component {
             marginTop: 70,
           }}
         >
-          © {new Date().getFullYear()}, it's basically just the
-          {` `}
-          <a href="https://github.com/gatsbyjs/gatsby-starter-blog">
-            Gatsby Starter Blog
-          </a>
+          Content © {new Date().getFullYear()}, this page was built with{" "}
+          <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
+          unnecessarily)
         </footer>
       </div>
     )
