@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Experience from "../components/experience"
-import Posts from "../components/posts"
+import Education from "../components/education"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -17,6 +17,7 @@ class Index extends React.Component {
         <SEO title="Portfolio" />
         <Bio />
         <Experience />
+        <Education />
         {/* <Posts /> */}
       </Layout>
     )

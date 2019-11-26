@@ -59,8 +59,11 @@ const Bio = () => {
         }}
       />
       <div>
-        <strong>{author}</strong> is a developer from Toronto, Ontario, Canada.{" "}
-        <a href="mailto:cal@ellemayo.com">Send him a message</a> if you think
+        <strong>{author}</strong> is a software developer from Toronto, Ontario,
+        Canada. He mostly works in fullstack JavaScript, but he likes playing
+        around with other languages as well. In his free time he loves to walk
+        his dogs, hang out with his kid, rock climb, hike, and camp.{" "}
+        <a href="mailto:hi@calirvine.com">Send him a message</a> if you think
         you would enjoy working together!
         <br />
         <div style={{ fontSize: rhythm(1) }}>
