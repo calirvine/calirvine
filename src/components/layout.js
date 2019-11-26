@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./layout.css"
+import { FaGithubSquare as Github } from "react-icons/fa"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -43,25 +44,32 @@ class Layout extends React.Component {
     )
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(30),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        <main>{children}</main>
-        <footer
+      <div>
+        <div
           style={{
-            marginTop: 70,
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(30),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          Content © {new Date().getFullYear()}, this page was built with{" "}
-          <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
-          unnecessarily)
-        </footer>
+          {header}
+          <main>{children}</main>
+          <footer
+            style={{
+              marginTop: 70,
+            }}
+          >
+            Content © {new Date().getFullYear()}, this page was built with{" "}
+            <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
+            unnecessarily)
+          </footer>
+        </div>
+        <div style={{ position: "fixed", top: "1em", right: "1em" }}>
+          <a href="https://github.com/calirvine/calirvine">
+            <Github /> Source{" "}
+          </a>
+        </div>
       </div>
     )
   }

@@ -14,7 +14,7 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Work experience" />
+        <SEO title="Portfolio" />
         <Bio />
         <Experience />
         {/* <Posts /> */}
