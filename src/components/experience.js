@@ -54,6 +54,7 @@ const Experiences = () => {
           } = experience
           let dateString = `${moment(startDate).format(`MMMM YYYY`)} `
           if (endDate) dateString += `to ${moment(endDate).format(`MMMM YYYY`)}`
+          else dateString += `to present`
           return (
             <div key={id}>
               <h3
