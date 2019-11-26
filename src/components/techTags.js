@@ -15,7 +15,7 @@ const techTags = {
     tech: "Git",
     name: "DiGitMerge",
     size: 20,
-    color: "white",
+    color: "black",
   },
   javascript: {
     tech: "JavaScript",
@@ -142,6 +142,24 @@ const techTags = {
     name: "FaUserFriends",
     size: 20,
     color: "black",
+  },
+  aws: {
+    tech: "AWS",
+    name: "FaAws",
+    size: 20,
+    color: "orange",
+  },
+  docker: {
+    tech: "Docker",
+    name: "FaDocker",
+    size: 20,
+    color: "blue",
+  },
+  sass: {
+    tech: "Sass",
+    name: "FaSass",
+    size: 20,
+    color: "pink",
   },
 }
 
