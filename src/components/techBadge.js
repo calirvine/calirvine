@@ -12,10 +12,12 @@ import techTags from "./techTags"
 const TechBadge = ({ tag }) => {
   const buttonStyle = {
     background: `white`,
-    borderRadius: `10%`,
+    borderRadius: `5%`,
     border: `1px solid black`,
     fontSize: `.85rem`,
     height: `100%`,
+    paddingLeft: rhythm(0.2),
+    paddingRight: rhythm(0.2),
   }
   const parentStyle = {
     display: `inline-block`,
@@ -43,12 +45,12 @@ const TechBadge = ({ tag }) => {
 
   return (
     <div style={parentStyle}>
-      <button style={buttonStyle} className="tech-tag text-white">
+      <div style={buttonStyle}>
         <div style={styleInline}>{tech} </div>
         <div style={{ ...styleInline, fontSize: size, color: color }}>
           {icon}
         </div>
-      </button>
+      </div>
     </div>
   )
 }

@@ -3,6 +3,11 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    h1: {
+      fontFamily: "itc-avant-garde-gothic-pro, sans-serif",
+      fontWeight: 700,
+      fontStyle: "normal",
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
