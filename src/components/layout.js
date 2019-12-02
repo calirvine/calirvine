@@ -60,7 +60,7 @@ class Layout extends React.Component {
               marginTop: 70,
             }}
           >
-            Content © {new Date().getFullYear()}, this page was built with{" "}
+            This page was built with{" "}
             <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
             unnecessarily)
           </footer>
