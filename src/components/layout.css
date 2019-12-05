@@ -1,6 +1,12 @@
 .contact-wrapper {
   float: right;
 }
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+}
 
 @media only screen and (max-width: 600px) {
   .contact-wrapper {

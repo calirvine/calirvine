@@ -12,8 +12,16 @@ class Layout extends React.Component {
     let header
 
     header = (
-      <header style={{ textAlign: "left", width: "100%", overflow: "hidden" }}>
-        <div style={{ float: "left" }}>
+      <header
+        style={{
+          display: `flex`,
+          flexDirection: `row`,
+          textAlign: `left`,
+          justifyContent: `space-between`,
+          alignItems: `center`,
+        }}
+      >
+        <div style={{}}>
           <h1
             style={{
               ...scale(1.5),
@@ -33,18 +41,17 @@ class Layout extends React.Component {
             </Link>
           </h1>
         </div>
-        <div className="contact-wrapper">
-          <ul style={{ float: "left", listStyle: "none", lineHeight: "1" }}>
-            <li>
-              <a href="mailto:hi@calirvine.com">hi@calirvine.com</a>
-            </li>
-          </ul>
+        <div
+          className="contact-wrapper"
+          style={{ justifyContent: `flex-end`, marginBottom: rhythm(1.5) }}
+        >
+          <a href="mailto:hi@calirvine.com">hi@calirvine.com</a>
         </div>
       </header>
     )
 
     return (
-      <div>
+      <div style={{ height: "100vh" }}>
         <IconContext.Provider value={{ style: { verticalAlign: "middle" } }}>
           <div
             style={{
@@ -52,13 +59,16 @@ class Layout extends React.Component {
               marginRight: `auto`,
               maxWidth: rhythm(30),
               padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+              height: `100vh`,
+              display: `flex`,
+              flexDirection: `column`,
             }}
           >
             {header}
             <main>{children}</main>
             <footer
               style={{
-                marginTop: 70,
+                marginTop: `auto`,
               }}
             >
               This page was built with{" "}
