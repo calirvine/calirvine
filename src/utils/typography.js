@@ -1,18 +1,24 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 
+const colors = {
+  classicBlue: "#0f4c81",
+}
+
 Wordpress2016.overrideThemeStyles = () => {
   return {
     h1: {
       fontFamily: "itc-avant-garde-gothic-pro, sans-serif",
       fontWeight: 700,
       fontStyle: "normal",
+      color: colors.classicBlue,
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
     a: {
       boxShadow: `none`,
+      color: colors.classicBlue,
     },
     "a:hover": {
       opacity: 0.75,
