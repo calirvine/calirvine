@@ -16,8 +16,10 @@ const SocialLink = ({ network, username }) => {
         href={`https://twitter.com/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Twitter"
       >
-        <Twitter />
+        <span className={socialStyles.srOnly}>Twitter</span>
+        <Twitter aria-hidden="true" />
       </a>
     )
   if (network === "linkedin")
@@ -27,8 +29,10 @@ const SocialLink = ({ network, username }) => {
         href={`https://www.linkedin.com/in/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Linkedin"
       >
-        <Linkedin />
+        <span className={socialStyles.srOnly}>LinkedIn</span>
+        <Linkedin aria-hidden="true" />
       </a>
     )
   if (network === "github")
@@ -38,8 +42,10 @@ const SocialLink = ({ network, username }) => {
         href={`https://github.com/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Github"
       >
-        <Github />
+        <span className={socialStyles.srOnly}>GitHub</span>
+        <Github aria-hidden="true" />
       </a>
     )
   if (network === "instagram")
@@ -49,8 +55,10 @@ const SocialLink = ({ network, username }) => {
         href={`https://www.instagram.com/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Instagram"
       >
-        <Instagram />
+        <span className={socialStyles.srOnly}>Instagram</span>
+        <Instagram aria-hidden="true" />
       </a>
     )
   if (network === "stackoverflow")
@@ -60,8 +68,10 @@ const SocialLink = ({ network, username }) => {
         href={`https://stackoverflow.com/users/${username}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Stackoverflow"
       >
-        <Stackoverflow />
+        <span className={socialStyles.srOnly}>Stackoverflow</span>
+        <Stackoverflow aria-hidden="true" />
       </a>
     )
   return (

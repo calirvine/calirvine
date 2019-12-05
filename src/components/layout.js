@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import "./layout.css"
 import { FaGithubSquare as Github } from "react-icons/fa"
-
+import { IconContext } from "react-icons"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -45,31 +45,33 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(30),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          {header}
-          <main>{children}</main>
-          <footer
+        <IconContext.Provider value={{ style: { verticalAlign: "middle" } }}>
+          <div
             style={{
-              marginTop: 70,
+              marginLeft: `auto`,
+              marginRight: `auto`,
+              maxWidth: rhythm(30),
+              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
           >
-            This page was built with{" "}
-            <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
-            unnecessarily)
-          </footer>
-        </div>
-        <div style={{ position: "fixed", top: "1em", right: "1em" }}>
-          <a href="https://github.com/calirvine/calirvine">
-            <Github /> Source{" "}
-          </a>
-        </div>
+            {header}
+            <main>{children}</main>
+            <footer
+              style={{
+                marginTop: 70,
+              }}
+            >
+              This page was built with{" "}
+              <a href="https://www.gatsbyjs.org/">GatsbyJS</a> (totally
+              unnecessarily)
+            </footer>
+          </div>
+          <div style={{ position: "fixed", top: "1em", right: "1em" }}>
+            <a href="https://github.com/calirvine/calirvine">
+              <Github aria-hidden="true" /> Source{" "}
+            </a>
+          </div>
+        </IconContext.Provider>
       </div>
     )
   }

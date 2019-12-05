@@ -47,7 +47,10 @@ const TechBadge = ({ tag }) => {
     <div style={parentStyle}>
       <div style={buttonStyle}>
         <div style={styleInline}>{tech} </div>
-        <div style={{ ...styleInline, fontSize: size, color: color }}>
+        <div
+          style={{ ...styleInline, fontSize: size, color: color }}
+          aria-hidden="true"
+        >
           {icon}
         </div>
       </div>
