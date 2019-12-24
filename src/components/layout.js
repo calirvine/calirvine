@@ -4,6 +4,7 @@ import "./layout.css"
 import { FaGithubSquare as Github } from "react-icons/fa"
 import { IconContext } from "react-icons"
 import { rhythm, scale } from "../utils/typography"
+import LayoutStyles from "./layout.module.css"
 
 class Layout extends React.Component {
   render() {
@@ -12,15 +13,7 @@ class Layout extends React.Component {
     let header
 
     header = (
-      <header
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          textAlign: `left`,
-          justifyContent: `space-between`,
-          alignItems: `center`,
-        }}
-      >
+      <header className={LayoutStyles.header}>
         <div style={{}}>
           <h1
             style={{
