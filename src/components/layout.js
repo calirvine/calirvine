@@ -62,6 +62,7 @@ class Layout extends React.Component {
             <footer
               style={{
                 marginTop: `auto`,
+                marginTop: `${rhythm(1.5)}`,
               }}
             >
               This page was built with{" "}
