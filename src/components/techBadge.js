@@ -3,11 +3,20 @@ Component is strongly based on https://github.com/willjw3/gatsby-starter-develop
 modified slightly and extended to suit my needs.
 */
 
-import React from "react"
-import { rhythm, scale } from "../utils/typography"
-import * as FontAwesome from "react-icons/fa"
-import * as Devicons from "react-icons/di"
-import techTags from "./techTags"
+import React from 'react'
+import { rhythm, scale } from '../utils/typography'
+import * as FontAwesome from 'react-icons/fa'
+import * as Devicons from 'react-icons/di'
+import * as GrommetIcons from 'react-icons/gr'
+import * as SimpleIcons from 'react-icons/si'
+import techTags from './techTags'
+
+const ICONS_MAP = {
+  Fa: FontAwesome,
+  Di: Devicons,
+  Gr: GrommetIcons,
+  Si: SimpleIcons,
+}
 
 const TechBadge = ({ tag }) => {
   const buttonStyle = {
@@ -39,9 +48,9 @@ const TechBadge = ({ tag }) => {
 
   const { name, size, color, tech } = techTags[tag]
   const str = name
-  const icon = /^Fa/.test(str)
-    ? React.createElement(FontAwesome[name])
-    : React.createElement(Devicons[name])
+
+  const iconKey = str.slice(0, 2)
+  const icon = React.createElement(ICONS_MAP[iconKey][name])
 
   return (
     <div style={parentStyle}>

@@ -4,7 +4,9 @@
   "startDate": "2015-10-01",
   "endDate": "2018-04-01",
   "url": "https://telus.com",
-  "description": "Worked on the retail support team in order to create and maintain employee portals and web applications.",
+  "description": [
+    "Worked on the retail support team in order to create and maintain employee portals and web applications."
+  ],
   "skills": [
     "javascript",
     "php",

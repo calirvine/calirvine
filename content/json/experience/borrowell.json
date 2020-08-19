@@ -1,0 +1,27 @@
+{
+  "company": "Borrowell",
+  "jobTitle": "Frontend Developer",
+  "startDate": "2020-03-01",
+  "endDate": null,
+  "url": "https://borrowell.com",
+  "description": [
+    "Frontend developer at Borrowell, a Canadian FinTech with over 1.5 million users focused on providing financial stability through credit monitoring tools.",
+    "Work is split between the growth marketing platform - leveraging GatsbyJS (React) as a static site generator to make beautiful, user friendly, and SEO optimized web applications - and the mobile team, where I write web components with React-native.",
+    "I work on a cross functional team, collaborating with designers and project owners, as well as key stakeholders to deliver exceptional user experiences."
+  ],
+  "skills": [
+    "react",
+    "reactNative",
+    "graphql",
+    "nodejs",
+    "gatsby",
+    "jest",
+    "jira",
+    "contentful",
+    "azure",
+    "html",
+    "css",
+    "git",
+    "agile"
+  ]
+}

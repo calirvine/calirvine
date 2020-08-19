@@ -74,7 +74,9 @@ const Experiences = () => {
               <p style={{ paddingBottom: 0, marginBottom: rhythm(0.25) }}>
                 <strong>{jobTitle}</strong> {dateString}
               </p>
-              <p style={{ marginBottom: rhythm(0.5) }}>{description}</p>
+              {description.map(paragraph => (
+                <p style={{ marginBottom: rhythm(0.5) }}>{paragraph}</p>
+              ))}
               <div style={{ display: "block!important" }}>
                 {skills.map(skill => (
                   <TechBadge key={skill} tag={skill} />
