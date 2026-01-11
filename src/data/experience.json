@@ -1,0 +1,107 @@
+[
+  {
+    "company": "Borrowell",
+    "jobTitle": "Frontend Developer",
+    "startDate": "2020-03-01",
+    "endDate": null,
+    "url": "https://borrowell.com",
+    "description": [
+      "Frontend developer at Borrowell, a Canadian FinTech with over 1.5 million users focused on providing financial stability through credit monitoring tools.",
+      "Work is split between the growth marketing platform - leveraging GatsbyJS (React) as a static site generator to make beautiful, user friendly, and SEO optimized web applications - and the mobile team, where I write web components with React Native.",
+      "I work on a cross functional team, collaborating with designers and project owners, as well as key stakeholders to deliver exceptional user experiences."
+    ],
+    "skills": [
+      "react",
+      "reactNative",
+      "graphql",
+      "nodejs",
+      "gatsby",
+      "jest",
+      "jira",
+      "contentful",
+      "azure",
+      "html",
+      "css",
+      "git",
+      "agile"
+    ]
+  },
+  {
+    "company": "The Fields Institute at The University of Toronto",
+    "jobTitle": "Web Application Developer (1yr contract)",
+    "startDate": "2019-03-01",
+    "endDate": "2020-03-01",
+    "url": "https://fields.utoronto.ca",
+    "description": [
+      "In house web application developer for a world renowned mathematical institute based out of the University of Toronto. Tasks are primarily creating modern frontend UIs in React/ Redux to interface with legacy APIs."
+    ],
+    "skills": [
+      "react",
+      "redux",
+      "nodejs",
+      "postgres",
+      "sqlite",
+      "html",
+      "css",
+      "git",
+      "docker",
+      "agile",
+      "aws"
+    ]
+  },
+  {
+    "company": "TELUS Mobility",
+    "jobTitle": "Developer Analyst",
+    "startDate": "2015-10-01",
+    "endDate": "2018-04-01",
+    "url": "https://telus.com",
+    "description": [
+      "Worked on the retail support team in order to create and maintain employee portals and web applications."
+    ],
+    "skills": [
+      "javascript",
+      "php",
+      "jquery",
+      "mariadb",
+      "mysql",
+      "cms",
+      "html",
+      "css",
+      "sass",
+      "git",
+      "agile",
+      "aws"
+    ]
+  },
+  {
+    "company": "Freelance",
+    "jobTitle": "Freelancer",
+    "startDate": "2018-04-01",
+    "endDate": null,
+    "url": "https://calirvine.com",
+    "description": [
+      "My freelance work is largely focused on website design and refreshes. Experienced in creating internationalization to support multiple languages. I have worked with several CMS both traditional and headless. I also do custom React + Node web app development projects."
+    ],
+    "skills": [
+      "react",
+      "redux",
+      "nodejs",
+      "php",
+      "postgres",
+      "redis",
+      "mariadb",
+      "mysql",
+      "mongodb",
+      "cms",
+      "html",
+      "css",
+      "sass",
+      "agile",
+      "git",
+      "docker",
+      "clientRelationships",
+      "teamLeadership",
+      "aws"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+---
+import educationData from '../data/education.json';
+
+type Education = typeof educationData[0];
+const education = educationData as Education[];
+---
+
+<section id="education" class="section">
+  <h2 class="text-4xl font-bold text-primary mb-12">Education</h2>
+  
+  <div class="space-y-6">
+    {education.map((edu) => (
+      <div class="card">
+        <div class="flex items-start justify-between mb-2">
+          <div>
+            <h3 class="text-2xl font-bold text-primary">{edu.title}</h3>
+            <p class="text-lg text-gray-700">{edu.degree}</p>
+          </div>
+          <p class="text-sm text-gray-600 whitespace-nowrap ml-4">
+            {edu.startYear} - {edu.endYear}
+          </p>
+        </div>
+        
+        {edu.url && (
+          <a href={edu.url} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline text-sm inline-block">
+            Visit website →
+          </a>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
