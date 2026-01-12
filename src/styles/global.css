@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 html {
   scroll-behavior: smooth;
@@ -16,4 +16,14 @@ a {
 
 a:hover {
   color: #5a6d7f;
+}
+
+h1,
+h2,
+h3 {
+  color: #445868;
+}
+
+.section {
+  margin-bottom: 4rem;
 }

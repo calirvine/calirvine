@@ -1,0 +1,62 @@
+---
+interface Props {
+  school: string
+  degree: string
+  field: string
+  graduationDate: string
+}
+
+const { school, degree, field, graduationDate } = Astro.props
+---
+
+<div class="education-item">
+  <div class="item-header">
+    <div>
+      <h3>{school}</h3>
+      <p class="degree">{degree} in {field}</p>
+    </div>
+    <p class="graduation-date">{graduationDate}</p>
+  </div>
+</div>
+
+<style>
+  .education-item {
+    margin-bottom: 0.1in;
+    page-break-inside: avoid;
+  }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .item-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #445868;
+  }
+
+  .degree {
+    font-size: 0.9rem;
+    color: #374151;
+    margin: 0.02in 0 0 0;
+    padding: 0;
+  }
+
+  .graduation-date {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  @media print {
+    .education-item {
+      page-break-inside: avoid;
+    }
+  }
+</style>

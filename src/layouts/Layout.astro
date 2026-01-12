@@ -1,45 +1,128 @@
 ---
-import '../styles/global.css';
+import '../styles/global.css'
+import '../styles/print.css'
 
 interface Props {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
 }
 
-const { title = 'Cal Irvine', description = 'Full-stack developer and freelancer' } = Astro.props;
+const {
+  title = 'Cal Irvine',
+  description = 'Full-stack developer and freelancer',
+} = Astro.props
 ---
 
-<!DOCTYPE html>
+<style>
+  .download-button {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+  }
+
+  .download-button:hover {
+    background-color: #374151;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  .download-button:active {
+    transform: scale(0.95);
+  }
+
+  @media print {
+    .download-button {
+      display: none;
+    }
+  }
+</style>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🧑‍💻</text></svg>"
+    />
   </head>
   <body class="bg-white text-gray-900">
     <header class="border-b border-gray-200 bg-white sticky top-0 z-50">
-      <nav class="max-w-4xl mx-auto px-4 md:px-8 py-6 flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold text-primary hover:text-primary-light transition-colors">
+      <nav
+        class="max-w-4xl mx-auto px-4 md:px-8 py-6 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="text-2xl font-bold text-primary hover:text-primary-light transition-colors"
+        >
           Cal Irvine
         </a>
         <div class="flex gap-6">
-          <a href="#experience" class="text-gray-600 hover:text-primary transition-colors">Experience</a>
-          <a href="#education" class="text-gray-600 hover:text-primary transition-colors">Education</a>
-          <a href="#skills" class="text-gray-600 hover:text-primary transition-colors">Skills</a>
+          <a
+            href="#experience"
+            class="text-gray-600 hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#education"
+            class="text-gray-600 hover:text-primary transition-colors"
+            >Education</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-600 hover:text-primary transition-colors">Skills</a
+          >
         </div>
       </nav>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
+    <main class="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16 relative">
+      <!-- Download Button -->
+      <button
+        class="download-button"
+        onclick="window.print()"
+        aria-label="Download as PDF"
+        title="Download as PDF"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      </button>
       <slot />
     </main>
 
     <footer class="border-t border-gray-200 mt-20 py-12 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 md:px-8 text-center text-gray-600">
-        <p class="mb-4">&copy; {new Date().getFullYear()} Cal Irvine. All rights reserved.</p>
-        <p class="text-sm">Designed with care and built with modern web technologies.</p>
+        <p class="mb-4">
+          &copy; {new Date().getFullYear()} Cal Irvine. All rights reserved.
+        </p>
       </div>
     </footer>
   </body>

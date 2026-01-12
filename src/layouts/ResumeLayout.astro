@@ -1,0 +1,56 @@
+---
+import '../styles/global.css'
+import '../styles/print.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Cal Irvine - Resume',
+  description = 'Resume for Cal Irvine, Full-Stack Software Engineer',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <main class="resume-main">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .resume-main {
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media screen {
+    .resume-main {
+      padding: 0.5in;
+    }
+  }
+
+  @media print {
+    .resume-main {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      margin: 0.5in;
+    }
+  }
+</style>

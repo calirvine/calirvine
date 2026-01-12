@@ -1,14 +1,43 @@
 [
   {
-    "company": "Borrowell",
-    "jobTitle": "Frontend Developer",
-    "startDate": "2020-03-01",
+    "company": "Shopify",
+    "jobTitle": "Senior Software Engineer",
+    "startDate": "2022-05-01",
     "endDate": null,
+    "url": "https://shopify.com",
+    "description": [
+      "Senior fullstack engineer in growth engineering on the activation team, focused on helping merchants succeed in their early journey. Build tools for accelerating merchant conversion from other platforms and contribute to AI-powered features that enhance the early merchant experience. Previously worked on retail growth initiatives.",
+      "Design and maintain scalable web applications using Ruby on Rails for backend services and React for frontend interfaces, with fullstack TypeScript applications. Work on GraphQL APIs handling millions of requests, designing schemas for backward compatibility and evolution.",
+      "Build distributed systems and cloud infrastructure serving millions of merchants. On-call engineer managing production incidents and reliability. Contribute to security and OAuth initiatives as part of platform work. Instrument systems with OpenTelemetry for production observability."
+    ],
+    "skills": [
+      "rails",
+      "react",
+      "typescript",
+      "ruby",
+      "javascript",
+      "postgresql",
+      "mysql",
+      "kafka",
+      "graphql",
+      "distributedSystems",
+      "opentelemetry",
+      "observability",
+      "oauth",
+      "security",
+      "onCall"
+    ]
+  },
+  {
+    "company": "Borrowell",
+    "jobTitle": "Senior Frontend Developer",
+    "startDate": "2020-03-01",
+    "endDate": "2022-05-01",
     "url": "https://borrowell.com",
     "description": [
-      "Frontend developer at Borrowell, a Canadian FinTech with over 1.5 million users focused on providing financial stability through credit monitoring tools.",
-      "Work is split between the growth marketing platform - leveraging GatsbyJS (React) as a static site generator to make beautiful, user friendly, and SEO optimized web applications - and the mobile team, where I write web components with React Native.",
-      "I work on a cross functional team, collaborating with designers and project owners, as well as key stakeholders to deliver exceptional user experiences."
+      "Senior frontend engineer at Borrowell, a Canadian FinTech with over 1.5 million users. Started as sole frontend engineer and grew the team to 5 engineers while serving as tech lead for growth platforms, establishing patterns and best practices for the frontend organization.",
+      "Built and maintained the growth marketing platform using GatsbyJS (React) as a static site generator for SEO-optimized web applications, and worked with React Native for the mobile team. Worked with GraphQL and Contentful for scalable content management.",
+      "Scaled the frontend infrastructure and mentored engineers on component architecture, state management, and performance optimization."
     ],
     "skills": [
       "react",
@@ -16,14 +45,8 @@
       "graphql",
       "nodejs",
       "gatsby",
-      "jest",
-      "jira",
       "contentful",
-      "azure",
-      "html",
-      "css",
-      "git",
-      "agile"
+      "azure"
     ]
   },
   {
@@ -33,21 +56,10 @@
     "endDate": "2020-03-01",
     "url": "https://fields.utoronto.ca",
     "description": [
-      "In house web application developer for a world renowned mathematical institute based out of the University of Toronto. Tasks are primarily creating modern frontend UIs in React/ Redux to interface with legacy APIs."
+      "In-house web application developer for the Fields Institute, a world-renowned mathematical research institute at the University of Toronto.",
+      "Developed modern React and Redux frontends to interface with legacy backend APIs, building tools for researchers and administrators. Worked across the full stack with Node.js, PostgreSQL, and SQLite databases."
     ],
-    "skills": [
-      "react",
-      "redux",
-      "nodejs",
-      "postgres",
-      "sqlite",
-      "html",
-      "css",
-      "git",
-      "docker",
-      "agile",
-      "aws"
-    ]
+    "skills": ["react", "redux", "nodejs", "postgres", "sqlite", "docker"]
   },
   {
     "company": "TELUS Mobility",
@@ -56,52 +68,10 @@
     "endDate": "2018-04-01",
     "url": "https://telus.com",
     "description": [
-      "Worked on the retail support team in order to create and maintain employee portals and web applications."
+      "Developer Analyst on the retail support team at TELUS Mobility, creating and maintaining internal employee portals and customer-facing web applications.",
+      "Built web applications using JavaScript, PHP, and jQuery, integrated with MariaDB and MySQL databases. Leveraged CMS platforms for content management and used Sass for scalable styling.",
+      "Delivered tools that improved operational efficiency for retail staff across TELUS locations."
     ],
-    "skills": [
-      "javascript",
-      "php",
-      "jquery",
-      "mariadb",
-      "mysql",
-      "cms",
-      "html",
-      "css",
-      "sass",
-      "git",
-      "agile",
-      "aws"
-    ]
-  },
-  {
-    "company": "Freelance",
-    "jobTitle": "Freelancer",
-    "startDate": "2018-04-01",
-    "endDate": null,
-    "url": "https://calirvine.com",
-    "description": [
-      "My freelance work is largely focused on website design and refreshes. Experienced in creating internationalization to support multiple languages. I have worked with several CMS both traditional and headless. I also do custom React + Node web app development projects."
-    ],
-    "skills": [
-      "react",
-      "redux",
-      "nodejs",
-      "php",
-      "postgres",
-      "redis",
-      "mariadb",
-      "mysql",
-      "mongodb",
-      "cms",
-      "html",
-      "css",
-      "sass",
-      "agile",
-      "git",
-      "docker",
-      "clientRelationships",
-      "teamLeadership",
-      "aws"
-    ]
+    "skills": ["javascript", "php", "jquery", "mariadb", "mysql", "cms", "sass"]
   }
 ]

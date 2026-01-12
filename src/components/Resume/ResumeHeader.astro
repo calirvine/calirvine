@@ -1,0 +1,73 @@
+---
+import SocialLinks from '../SocialLinks.astro'
+---
+
+<div class="resume-header">
+  <div class="header-content">
+    <h1>Cal Irvine</h1>
+    <p class="title">Full-Stack Software Engineer</p>
+  </div>
+  <div class="header-contact">
+    <p>Toronto, Ontario, Canada</p>
+    <p><a href="mailto:hi@calirvine.com">hi@calirvine.com</a></p>
+    <div class="social-links-compact">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.2in;
+    padding-bottom: 0.15in;
+    border-bottom: 2px solid #445868;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: #445868;
+  }
+
+  .title {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-contact {
+    text-align: right;
+  }
+
+  .header-contact p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .header-contact a {
+    color: #445868;
+    text-decoration: none;
+  }
+
+  .header-contact a:hover {
+    text-decoration: underline;
+  }
+
+  .social-links-compact {
+    margin-top: 0.1in;
+  }
+
+  @media print {
+    .resume-header {
+      margin-bottom: 0.15in;
+      padding-bottom: 0.1in;
+    }
+  }
+</style>

@@ -1,8 +1,8 @@
 ---
 import type { Experience } from '../types';
+import SkillPill from './SkillPill.astro';
 import experienceData from '../data/experience.json';
 import skillsData from '../data/skills.json';
-import { getIconComponent } from '../utils/icons';
 
 interface Props {
   experience?: Experience[];
@@ -50,16 +50,14 @@ function getSkillData(skillKey: string) {
           ))}
         </div>
         
-        <div class="flex flex-wrap gap-2">
-          {job.skills.map((skillKey) => {
-            const skillInfo = getSkillData(skillKey);
-            return skillInfo ? (
-              <span class="badge">
-                {skillInfo.name}
-              </span>
-            ) : null;
-          })}
-        </div>
+         <div class="flex flex-wrap gap-2">
+           {job.skills.map((skillKey) => {
+             const skillInfo = getSkillData(skillKey);
+             return skillInfo ? (
+               <SkillPill name={skillInfo.name} iconName={skillInfo.icon} />
+             ) : null;
+           })}
+         </div>
       </div>
     ))}
   </div>

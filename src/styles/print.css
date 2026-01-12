@@ -1,0 +1,267 @@
+/* Print Stylesheet for PDF Resumes */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #445868 !important;
+  }
+
+  /* Remove interactive elements not needed in print */
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  html {
+    scroll-behavior: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Main content - remove all padding */
+  main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Reset element margins and padding selectively */
+  body,
+  html {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Typography - set explicit margins */
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0 0 0.12in 0 !important;
+    color: black;
+  }
+
+  h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 0.1in 0 0.06in 0 !important;
+    color: black;
+    border-bottom: 1pt solid black;
+    padding-bottom: 0.04in !important;
+  }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 0.06in 0 0.03in 0 !important;
+    color: black;
+  }
+
+  p {
+    margin: 0 0 0.04in 0 !important;
+    font-size: 10.5pt;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    margin: 0.05in 0 0.05in 0.2in !important;
+    padding-left: 0.2in;
+  }
+
+  li {
+    margin: 0 0 0.03in 0 !important;
+  }
+
+  /* Links */
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  /* Sections */
+  .section {
+    margin: 0 0 0.1in 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Bio/Contact section */
+  .bio,
+  .contact {
+    margin: 0 0 0.08in 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Space utilities cleanup */
+  .space-y-8 > * + * {
+    margin-top: 0.08in !important;
+  }
+
+  .space-y-2 > * + * {
+    margin-top: 0.03in !important;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 0.04in !important;
+  }
+
+  .space-y-12 > * + * {
+    margin-top: 0.1in !important;
+  }
+
+  /* Specific override for h2 margins in sections */
+  .section h2 {
+    margin-bottom: 0.1in !important;
+  }
+
+  /* Skills section */
+  .skills-section,
+  .skill-pill {
+    page-break-inside: avoid;
+  }
+
+  .skill-pill {
+    display: inline-block;
+    margin: 0.05in 0.05in 0.05in 0;
+    padding: 0.05in 0.1in;
+    border: 1pt solid black;
+    background-color: white !important;
+    color: black !important;
+    font-size: 10pt;
+  }
+
+  /* Experience and education items */
+  .experience-item,
+  .education-item {
+    margin-bottom: 0.15in;
+    page-break-inside: avoid;
+  }
+
+  .job-title,
+  .degree {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  .company,
+  .school {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  .date-range {
+    font-size: 10pt;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .job-description,
+  .education-description {
+    margin: 0.05in 0 0 0;
+    padding: 0;
+    font-size: 10.5pt;
+  }
+
+  /* Social links */
+  .social-links {
+    margin: 0.1in 0;
+    page-break-inside: avoid;
+  }
+
+  .social-link {
+    display: inline-block;
+    margin-right: 0.15in;
+  }
+
+  .social-link a {
+    color: black !important;
+    text-decoration: none;
+  }
+
+  /* Hide print-unfriendly elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Avoid orphans and widows */
+  h1,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Prevent page breaks in unwanted places */
+  .section,
+  .experience-item,
+  .education-item {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Image handling */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Table handling */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1pt solid black;
+    padding: 0.05in;
+  }
+
+  /* Code blocks */
+  code,
+  pre {
+    background-color: #f5f5f5 !important;
+    border: 1pt solid #ddd !important;
+    font-family: monospace;
+    font-size: 9pt;
+    overflow-x: auto;
+  }
+
+  /* Remove decorative borders */
+  hr {
+    border: none;
+    border-top: 1pt solid black;
+    margin: 0.1in 0;
+  }
+}

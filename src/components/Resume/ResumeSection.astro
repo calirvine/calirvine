@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<section class="resume-section">
+  <h2>{title}</h2>
+  <div class="section-content">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .resume-section {
+    margin-bottom: 0.12in;
+  }
+
+  .resume-section h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #445868;
+    margin: 0;
+    padding: 0.08in 0 0.08in 0;
+    border-bottom: 1px solid #d1d5db;
+  }
+
+  .section-content {
+    margin-top: 0.08in;
+  }
+
+  @media print {
+    .resume-section {
+      margin-bottom: 0.08in;
+    }
+    
+    .resume-section h2 {
+      page-break-after: avoid;
+    }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import skillsData from '../data/skills.json';
+import SkillPill from './SkillPill.astro';
 
 type Skill = typeof skillsData[0];
 const skills = skillsData as Skill[];
@@ -8,11 +9,9 @@ const skills = skillsData as Skill[];
 <section id="skills" class="section">
   <h2 class="text-4xl font-bold text-primary mb-12">Skills & Technologies</h2>
   
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div class="flex flex-wrap gap-4">
     {skills.map((skill) => (
-      <div class="inline-flex flex-col items-center text-center justify-center bg-primary-50 text-primary px-3 py-4 rounded-lg text-sm font-medium border border-primary-100 hover:bg-primary-100 transition-colors cursor-default">
-        <span class="font-semibold">{skill.name}</span>
-      </div>
+      <SkillPill name={skill.name} iconName={skill.icon} />
     ))}
   </div>
 </section>

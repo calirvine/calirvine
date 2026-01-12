@@ -1,0 +1,102 @@
+---
+interface Props {
+  company: string
+  jobTitle: string
+  startDate: string
+  endDate: string | null
+  description: string[]
+  skills?: string[]
+}
+
+const { company, jobTitle, startDate, endDate, description, skills } = Astro.props
+
+function formatDate(dateString: string | null): string {
+  if (!dateString) return 'Present'
+  const date = new Date(dateString)
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+}
+---
+
+<div class="experience-item">
+  <div class="item-header">
+    <div>
+      <h3>{company}</h3>
+      <p class="job-title">{jobTitle}</p>
+    </div>
+    <p class="date-range">{formatDate(startDate)} – {formatDate(endDate)}</p>
+  </div>
+  <ul class="description-list">
+    {description.map((desc) => (
+      <li>{desc}</li>
+    ))}
+  </ul>
+  {skills && skills.length > 0 && (
+    <p class="skills-text">
+      <strong>Skills:</strong> {skills.join(' • ')}
+    </p>
+  )}
+</div>
+
+<style>
+  .experience-item {
+    margin-bottom: 0.12in;
+    page-break-inside: avoid;
+  }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.06in;
+  }
+
+  .item-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #445868;
+  }
+
+  .job-title {
+    font-size: 0.9rem;
+    color: #374151;
+    margin: 0.02in 0 0 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  .date-range {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .description-list {
+    margin: 0.04in 0 0.04in 0.2in;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  .description-list li {
+    margin: 0 0 0.03in 0;
+    padding: 0;
+    line-height: 1.4;
+    color: #374151;
+  }
+
+  .skills-text {
+    font-size: 0.85rem;
+    margin: 0.04in 0 0 0;
+    padding: 0;
+    color: #4b5563;
+  }
+
+  @media print {
+    .experience-item {
+      page-break-inside: avoid;
+    }
+  }
+</style>

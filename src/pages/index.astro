@@ -1,14 +1,170 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Bio from '../components/Bio.astro';
-import ExperienceSection from '../components/ExperienceSection.astro';
-import EducationSection from '../components/EducationSection.astro';
-import SkillsSection from '../components/SkillsSection.astro';
+import Layout from '../layouts/Layout.astro'
+import Bio from '../components/Bio.astro'
+import ExperienceSection from '../components/ExperienceSection.astro'
+import EducationSection from '../components/EducationSection.astro'
+import SkillsSection from '../components/SkillsSection.astro'
+import Contact from '../components/Contact.astro'
+import ResumeHeader from '../components/Resume/ResumeHeader.astro'
+import ResumeSection from '../components/Resume/ResumeSection.astro'
+import ExperienceItem from '../components/Resume/ExperienceItem.astro'
+import EducationItem from '../components/Resume/EducationItem.astro'
+import type { Experience } from '../types'
+import experienceData from '../data/experience.json'
+import skillsData from '../data/skills.json'
+
+const experience = experienceData as Experience[]
+const skills = skillsData
+
+function getSkillName(skillKey: string) {
+  const skill = skills.find(s => s.key === skillKey)
+  return skill ? skill.name : skillKey
+}
+
+function formatExperienceDates(startDate: string, endDate: string | null): string {
+  const formatDate = (dateString: string | null): string => {
+    if (!dateString) return 'Present'
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+  }
+  return `${formatDate(startDate)} – ${formatDate(endDate)}`
+}
 ---
 
-<Layout title="Cal Irvine - Portfolio" description="Full-stack developer and freelancer based in Canada">
-  <Bio />
-  <ExperienceSection />
-  <EducationSection />
-  <SkillsSection />
+<Layout
+  title="Cal Irvine - Portfolio"
+  description="Full-stack developer and freelancer based in Canada"
+>
+  <!-- Web View -->
+  <div class="web-view">
+    <Bio />
+    <ExperienceSection />
+    <EducationSection />
+    <SkillsSection />
+    <Contact />
+  </div>
+
+  <!-- Print View (Resume) -->
+  <div class="print-view resume-container">
+    <ResumeHeader>
+      <a href="https://github.com/calirvine" target="_blank">github.com/calirvine</a>
+      <a href="https://linkedin.com/in/callum-irvine-58bb094b" target="_blank">linkedin.com/in/callum-irvine</a>
+    </ResumeHeader>
+
+    <ResumeSection title="Professional Summary">
+      <p>Full-stack software engineer with 8+ years of experience building scalable web applications. Specialized in React, Node.js, and TypeScript with a strong background in distributed systems and cloud infrastructure. Proven track record of leading technical initiatives and mentoring engineering teams.</p>
+    </ResumeSection>
+
+    <ResumeSection title="Experience">
+      {experience.map((job) => (
+        <ExperienceItem
+          company={job.company}
+          jobTitle={job.jobTitle}
+          startDate={job.startDate}
+          endDate={job.endDate}
+          description={job.description}
+          skills={job.skills.slice(0, 8).map(getSkillName)}
+        />
+      ))}
+    </ResumeSection>
+
+    <ResumeSection title="Education">
+      <EducationItem
+        school="Ontario Tech University"
+        degree="Bachelor of IT"
+        field="Information Technology"
+        graduationDate="2009"
+      />
+    </ResumeSection>
+
+    <ResumeSection title="Technical Skills">
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Frontend</h4>
+          <p>React, TypeScript, JavaScript, HTML/CSS, Redux, React Native</p>
+        </div>
+        <div class="skill-category">
+          <h4>Backend</h4>
+          <p>Node.js, Ruby on Rails, GraphQL, PostgreSQL, MySQL, MongoDB</p>
+        </div>
+        <div class="skill-category">
+          <h4>Infrastructure</h4>
+          <p>AWS, Azure, Docker, Kafka, Redis, OpenTelemetry</p>
+        </div>
+        <div class="skill-category">
+          <h4>Other</h4>
+          <p>Git, Agile, System Design, Technical Leadership, API Design</p>
+        </div>
+      </div>
+    </ResumeSection>
+  </div>
 </Layout>
+
+<style>
+  .web-view {
+    display: block;
+  }
+
+  .print-view {
+    display: none;
+  }
+
+  @media print {
+    .web-view {
+      display: none;
+    }
+
+    .print-view {
+      display: block;
+    }
+  }
+
+  .resume-container {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    line-height: 1.5;
+  }
+
+  .resume-container p {
+    margin: 0 0 0.08in 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.15in;
+  }
+
+  .skill-category {
+    page-break-inside: avoid;
+  }
+
+  .skill-category h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.04in 0;
+    color: #445868;
+    padding: 0;
+  }
+
+  .skill-category p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    color: #4b5563;
+  }
+
+  @media print {
+    .resume-container p {
+      margin: 0 0 0.05in 0 !important;
+      font-size: 10.5pt;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.1in;
+    }
+  }
+</style>

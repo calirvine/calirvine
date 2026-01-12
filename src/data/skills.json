@@ -1,44 +1,78 @@
 [
-  { "key": "react", "name": "React", "icon": "FaReact" },
-  { "key": "nodejs", "name": "Node.js", "icon": "DiNodejsSmall" },
-  { "key": "git", "name": "Git", "icon": "DiGitMerge" },
-  { "key": "javascript", "name": "JavaScript", "icon": "DiJsBadge" },
-  { "key": "css", "name": "CSS", "icon": "DiCss3Full" },
-  { "key": "python", "name": "Python", "icon": "DiPython" },
-  { "key": "ruby", "name": "Ruby", "icon": "DiRuby" },
-  { "key": "java", "name": "Java", "icon": "FaJava" },
-  { "key": "angular", "name": "Angular", "icon": "DiAngularSimple" },
-  { "key": "html", "name": "HTML", "icon": "FaHtml5" },
-  { "key": "php", "name": "PHP", "icon": "DiPhp" },
-  { "key": "mongodb", "name": "MongoDB", "icon": "DiMongodb" },
-  { "key": "vscode", "name": "VS Code", "icon": "DiVisualstudio" },
-  { "key": "redux", "name": "Redux", "icon": "DiReact" },
-  { "key": "postgres", "name": "PostgreSQL", "icon": "DiPostgresql" },
-  { "key": "redis", "name": "Redis", "icon": "DiRedis" },
-  { "key": "mysql", "name": "MySQL", "icon": "DiMysql" },
-  { "key": "mariadb", "name": "MariaDB", "icon": "DiDatabase" },
-  { "key": "sqlite", "name": "SQLite", "icon": "DiSqllite" },
-  { "key": "agile", "name": "Agile", "icon": "DiScrum" },
-  { "key": "jquery", "name": "JQuery", "icon": "DiJqueryLogo" },
-  { "key": "cms", "name": "CMS", "icon": "FaPencilAlt" },
+  { "key": "react", "name": "React", "icon": "Zap" },
+  { "key": "nodejs", "name": "Node.js", "icon": "Zap" },
+  { "key": "git", "name": "Git", "icon": "GitBranch" },
+  { "key": "javascript", "name": "JavaScript", "icon": "Code" },
+  { "key": "css", "name": "CSS", "icon": "Palette" },
+  { "key": "python", "name": "Python", "icon": "Code" },
+  { "key": "ruby", "name": "Ruby", "icon": "Code" },
+  { "key": "java", "name": "Java", "icon": "Code" },
+  { "key": "angular", "name": "Angular", "icon": "Zap" },
+  { "key": "html", "name": "HTML", "icon": "FileText" },
+  { "key": "php", "name": "PHP", "icon": "Code" },
+  { "key": "mongodb", "name": "MongoDB", "icon": "Database" },
+  { "key": "vscode", "name": "VS Code", "icon": "FileCode" },
+  { "key": "redux", "name": "Redux", "icon": "Zap" },
+  { "key": "postgres", "name": "PostgreSQL", "icon": "Database" },
+  { "key": "redis", "name": "Redis", "icon": "Database" },
+  { "key": "kafka", "name": "Kafka", "icon": "Zap" },
+  { "key": "mysql", "name": "MySQL", "icon": "Database" },
+  { "key": "mariadb", "name": "MariaDB", "icon": "Database" },
+  { "key": "sqlite", "name": "SQLite", "icon": "Database" },
+  { "key": "agile", "name": "Agile", "icon": "Zap" },
+  { "key": "jquery", "name": "JQuery", "icon": "Code" },
+  { "key": "cms", "name": "CMS", "icon": "FileText" },
   {
     "key": "clientRelationships",
     "name": "Client Relationships",
-    "icon": "FaHandsHelping"
+    "icon": "Users"
   },
   {
     "key": "teamLeadership",
     "name": "Team Leadership",
-    "icon": "FaUserFriends"
+    "icon": "Users"
   },
-  { "key": "aws", "name": "AWS", "icon": "FaAws" },
-  { "key": "docker", "name": "Docker", "icon": "FaDocker" },
-  { "key": "sass", "name": "Sass", "icon": "FaSass" },
-  { "key": "azure", "name": "Azure", "icon": "DiVisualstudio" },
-  { "key": "contentful", "name": "Contentful", "icon": "FaDatabase" },
-  { "key": "graphql", "name": "GraphQL", "icon": "GrGraphQl" },
-  { "key": "gatsby", "name": "GatsbyJS", "icon": "GrGatsbyjs" },
-  { "key": "jest", "name": "Jest", "icon": "SiJest" },
-  { "key": "jira", "name": "Jira", "icon": "FaJira" },
-  { "key": "reactNative", "name": "React Native", "icon": "FaReact" }
+  { "key": "aws", "name": "AWS", "icon": "Cloud" },
+  { "key": "docker", "name": "Docker", "icon": "Container" },
+  { "key": "sass", "name": "Sass", "icon": "Palette" },
+  { "key": "azure", "name": "Azure", "icon": "Cloud" },
+  { "key": "contentful", "name": "Contentful", "icon": "Database" },
+  { "key": "graphql", "name": "GraphQL", "icon": "Network" },
+  { "key": "gatsby", "name": "GatsbyJS", "icon": "Zap" },
+  { "key": "jest", "name": "Jest", "icon": "CheckCircle" },
+  { "key": "jira", "name": "Jira", "icon": "CheckCircle" },
+  { "key": "reactNative", "name": "React Native", "icon": "Zap" },
+  { "key": "rails", "name": "Rails", "icon": "Code" },
+  { "key": "typescript", "name": "TypeScript", "icon": "Code" },
+  { "key": "ai", "name": "AI Tooling", "icon": "Sparkles" },
+  {
+    "key": "distributedSystems",
+    "name": "Distributed Systems",
+    "icon": "Network"
+  },
+  {
+    "key": "opentelemetry",
+    "name": "OpenTelemetry",
+    "icon": "Activity"
+  },
+  {
+    "key": "observability",
+    "name": "Observability",
+    "icon": "Eye"
+  },
+  {
+    "key": "oauth",
+    "name": "OAuth",
+    "icon": "Lock"
+  },
+  {
+    "key": "security",
+    "name": "Security",
+    "icon": "Shield"
+  },
+  {
+    "key": "onCall",
+    "name": "On-Call",
+    "icon": "AlertCircle"
+  }
 ]
